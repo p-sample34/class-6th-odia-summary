@@ -9,7 +9,7 @@ document.getElementById("story-form").addEventListener("submit", async (e) => {
         return;
     }
 
-    const response = await fetch("https://storyclub.onrender.com/api/stories", {
+    const response = await fetch("https://class-6th-odia-summary.onrender.com/api/stories", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, content }),
