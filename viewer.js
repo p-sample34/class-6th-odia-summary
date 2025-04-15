@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const response = await fetch("https://storyclub.onrender.com/api/stories");
+    const response = await fetch("https://class-6th-odia-summary.onrender.com/api/stories");
     const stories = await response.json();
 
     const storiesContainer = document.getElementById("stories-container");
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.querySelectorAll(".like-button").forEach(button => {
         button.addEventListener("click", async (event) => {
             const storyId = event.target.getAttribute("data-id");
-            const response = await fetch(`https://storyclub.onrender.com/api/stories/${storyId}/like`, { method: "POST" });
+            const response = await fetch(`https://class-6th-odia-summary.onrender.com/api/stories/${storyId}/like`, { method: "POST" });
             const updatedStory = await response.json();
             event.target.textContent = `Like (${updatedStory.likes})`;
             event.target.disabled = true;
